@@ -33,3 +33,33 @@ const smart = new SmartDuck();
 makeDuckFly(desi);
 makeDuckFly(videsi);
 makeDuckFly(smart);
+
+class User{
+    public name: string;
+    private orgcode:string = "DuckCorp";
+    protected role : string;
+
+    constructor(name:string,role:string){
+        this.name;
+        this.role;
+    }
+    introduce():void{
+        console.log(`I am ${this.name} from ${this.orgcode}`);
+    }
+}
+
+class Manager extends User{
+    getRole(): void{
+        console.log(this.role);
+    }
+}
+
+// Test Q5
+
+const user = new User("Daffy","User");
+user.introduce();
+
+const manager = new Manager("Ashok"," Manager");
+manager.introduce();
+manager.getRole();
+
