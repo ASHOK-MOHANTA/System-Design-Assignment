@@ -36,7 +36,7 @@ class Sugar extends BeverageDecorater{
         return this.beverage.getDescription()+"+ Sugar";
     }
     getCost(): Number {
-        return this.beverage.getCost() + 10;
+        return this.beverage.getCost();
     }
 }
 
